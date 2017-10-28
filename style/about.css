@@ -1,0 +1,36 @@
+.go-rule{
+	width: 200px;
+	height: 40px;
+	background-color: #ffdc00;
+	border-radius: 40px;
+	margin: 70px auto 30px;
+	font-family: PingFangSC-Semibold;
+	font-size: 14px;
+	color: #000;
+	text-align: center;
+	line-height: 40px;
+	letter-spacing: 0;
+}
+.go-rule a{
+	color: #000;
+}
+.introduce{
+	padding: 70px 0 118px 0;
+	text-align: center;
+}
+.col-710{
+	width: 710px;
+	margin: 0 auto;
+	position: relative;
+}
+.introduce h3{
+	font-size: 36px;
+	padding: 42px 0 26px;
+	font-weight: 500;
+}
+.introduce p{
+	line-height: 32px;
+	font-size: 14px;
+	color: #8d8d8d;
+	text-align: center;
+}

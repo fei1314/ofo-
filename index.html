@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ofo官网</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0}
+		body{background: #ccc;overflow: hidden;}
+		.balloon{
+			position: absolute;
+			width: 160px;
+			height: 160px;
+			background-color: #fafaf9;
+			border-radius: 160px 160px 64px 160px;
+			transform: rotate(45deg);
+			box-shadow: -8px -8px 80px -8px #873940 inset;
+		}
+		.balloon:after{
+			content: '';
+			border: 8px solid transparent;
+			border-right: #873940;
+			transform: rotate(45deg);
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+		var num=10;
+		var bZ=160;
+		var wH=window.innerHeight;
+		var wW=window.innerWidth;
+		var timer;
+
+		init();
+		move();
+		timer=setInterval(move,1);
+		function init(){
+			var fragment=document.createDocumentFragment();
+			for(var i=0;i<num;i++){
+				var randomX=Math.floor(Math.random()*wW)-bZ;
+				randomX=Math.abs(randomX);
+				var balloon=document.createElement('div');
+				balloon.className='balloon';
+				balloon.style.top=(wH-bZ)+'px';
+				balloon.style.left=randomX+'px';
+				balloon.speed=Math.floor(Math.random()*8)+1;
+				fragment.appendChild(balloon);
+			}
+			document.body.appendChild(fragment);
+		}
+
+		function move(){
+			var balloons=document.querySelectorAll('.balloon');
+			for(var i=0,len=balloons.length;i<len;i++){
+				balloons[i].style.top=balloons[i].offsetTop-balloons[i].speed+'px';
+				if(balloons[i].style.top<-wH){
+					balloons[i].style.top=wH+'px'
+				}
+			}
+		}
+
+		
+	</script>
+</body>
+</html>

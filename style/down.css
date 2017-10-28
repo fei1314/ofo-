@@ -1,0 +1,45 @@
+.col-1140{
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+.introduce .title{
+	padding: 50px 0;
+	font-weight: 500;
+	font-size:30px;
+	text-align: center;
+	color: #333;
+}
+.introduce .steps-warp{
+	margin-bottom: 112px;
+}
+
+.introduce .steps-warp li{
+	width: 316px;
+	margin-right: 80px;
+	display: inline-block;
+}
+.introduce .steps-warp li img{
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.introduce .steps-warp li h3{
+	display: block;
+	font-size: 1.17em;
+	font-weight: bold;
+	text-align: center;
+	color: #333;
+}
+.introduce .steps-warp li h3 em{
+	font-style: normal;
+	font-size: 22px;
+	line-height: 27px;
+	vertical-align: text-bottom;
+}
+.introduce .steps-warp li p{
+	line-height: 30px;
+	font-size: 14px;
+	text-align: center;
+	opacity: 0.6;
+}

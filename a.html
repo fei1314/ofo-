@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <title>jd网站的轮播图效果</title> 
+  <meta charset="utf-8" /> 
+  <link rel="stylesheet" type="text/css" href="./css/style.css" /> 
+ </head> 
+ <body> 
+   <div id="ad"> 
+   <a href="" id="links"> <img src="" id="image" /> </a> 
+   <div id="left">
+     &lt; 
+   </div> 
+   <div id="right">
+     &gt; 
+   </div> 
+   <div id="number"> 
+    <ul> 
+     <li>1</li> 
+     <li>2</li> 
+     <li>3</li> 
+     <li>4</li> 
+     <li>5</li> 
+     <li>6</li> 
+    </ul> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+ 	//节点获取
+ 	var image = document.getElementById("image");
+var ad = document.getElementById("ad");
+var left = document.getElementById("left");
+var right = document.getElementById("right");
+var numlist = document.getElementById("number").getElementsByTagName("li");
+var length = numlist.length;
+//初始化
+image.src = "./image/ad01.jpg";
+var add = 1;
+//鼠标划入ad块的时候才有左右箭头的显示
+ad.onmouseover = function() {
+    left.style.display = "block";
+    right.style.display = "block";
+    clearInterval(lun);
+}
+ad.onmouseout = function() {
+    left.style.display = "none";
+    right.style.display = "none";
+    lunbo();
+}
+//点击左右箭头有图片的切换效果
+left.onclick = function() {
+    //alert('1');
+    add = add - 1;
+    if (add < 1) {
+        add = 6;
+    }
+    image.src = "./image/ad0" + add + ".jpg";
+    var x = add - 1;
+    for (var i = 0; i < length; i++) {
+        numlist[i].style.background = "#3e3e3e";
+        if (x == i) {
+            numlist[i].style.background = "#b61b1f";
+        }
+    }
+}
+right.onclick = function() {
+    add = add + 1;
+    if (add > 6) {
+        add = 1;
+    }
+    image.src = "./image/ad0" + add + ".jpg";
+    var x = add - 1;
+    for (var i = 0; i < length; i++) {
+        numlist[i].style.background = "#3e3e3e";
+        if (x == i) {
+            numlist[i].style.background = "#b61b1f";
+        }
+    }
+}
+//图片的轮播
+function lunbo() {
+    lun = setInterval(function() {
+        add = add + 1;
+        if (add > 6) {
+            add = 1
+        }
+        image.src = "./image/ad0" + add + ".jpg";
+        var x = add - 1;
+        for (var i = 0; i < length; i++) {
+            numlist[i].style.background = "#3e3e3e";
+            if (x == i) {
+                numlist[i].style.background = "#b61b1f";
+            }
+        }
+    },
+    2000);
+}
+lunbo();
+//鼠标滑动过图片切换数字
+for (var i = 0; i < length; i++) {
+    numlist[i].onmouseover = function() {
+        add = this.innerHTML;
+        image.src = "./image/ad0" + add + ".jpg";
+        var x = add - 1;
+        for (var i = 0; i < length; i++) {
+            numlist[i].style.background = "#3e3e3e";
+            if (x == i) {
+                numlist[i].style.background = "#b61b1f";
+            }
+        }
+    }
+}
+ 	</script> 
+ </body>
+</html>

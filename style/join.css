@@ -1,0 +1,55 @@
+.col-1140{
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+.post{
+	padding: 56px 0 100px;
+}
+.col-800{
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+.post ul li{
+	width: 23%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+}
+.post ul li h3{
+	font-size: 18px;
+	text-align: center;
+	color: #585858;
+	margin-bottom: 16px;
+}
+.post ul li a{
+	display: block;
+	height: 24px;
+	line-height: 24px;
+	color: #b8b8b8;
+	font-size: 14px;
+}
+
+.post .morepost{
+	padding-top: 40px;
+}
+.post .morepost #morebtn{
+	width: 134px;
+	height: 58px;
+	line-height: 58px;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #e5e5e5;
+	font-size: 14px;
+	color: #333;
+	border-radius: 30px;
+}
+
+.post .morepost p{
+	padding-top: 40px;
+	font-size: 14px;
+	color: #929292;
+	text-align: center;
+}
